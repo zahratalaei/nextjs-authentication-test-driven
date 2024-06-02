@@ -27,3 +27,35 @@ cd colosl-js-code-test
 npm install
 npm run test
 ```
+## **Summary of Changes**
+
+### **Changes Implemented**
+
+1. **Fixed Redirecting Issue**:
+    - Resolved issues related to incorrect or missing redirects within the application.
+2. **Fixed Test Errors**:
+    - Addressed and corrected errors in existing unit tests to ensure they pass successfully.
+3. **Improved Responsive Behavior**:
+    - Enhanced the layout to be fully responsive across different devices and screen sizes.
+4. **Added Register Page**:
+    - Created a new register page allowing users to sign up.
+5. **Added Confirm Modal for Remove Button**:
+    - Implemented a confirmation modal that appears when attempting to remove a contact, adding an extra layer of user verification.
+6. **Expanded Unit Testing**:
+    - Added more unit tests for existing components.
+    - Created unit tests for new components introduced during the enhancement.
+7. **Enhanced Random Contact Generation**:
+    - Adjusted the **`randomContact`** function to generate more realistic contact details, ensuring more precise and relevant tests.
+
+### **Potential Future Changes**
+
+1. **Selectable Contacts for Bulk Removal**:
+    - Implement functionality to allow selecting multiple contacts and removing them simultaneously.
+2. **Backend for Storing Registered Users**:
+    - Develop a backend solution to store user registration data securely.
+3. **Enhanced Contact Addition**:
+    - Implement functionality for adding contacts with user-provided data and storing these contacts in the backend, replacing the current random contact generation.
+4. **Google Authentication Option**:
+    - Add an option for users to log in using Google authentication for enhanced security and convenience.
+5. **Further Enhancements**:
+    - Additional improvements and features to be determined as the application evolves.
