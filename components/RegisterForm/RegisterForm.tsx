@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from '@/components';
+import { Button, Card } from '@/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { FC, ReactNode } from 'react';
@@ -52,6 +52,7 @@ export const RegisterForm: FC<RegisterFormProps> = ({ children }) => {
       console.error(error);
     }
   };
+  const handleLogin = () => router.push('/login');
 
   return (
     <Card className={styles.card}>
@@ -78,6 +79,10 @@ export const RegisterForm: FC<RegisterFormProps> = ({ children }) => {
           <span className={styles.error}>{errors.confirmPassword.message}</span>
         )}
         <button type="submit">Register</button>
+        <p>Already have an account?</p>
+        <Button size="sm" onClick={handleLogin}>
+          Login
+        </Button>
       </form>
     </Card>
   );

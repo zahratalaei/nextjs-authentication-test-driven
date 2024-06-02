@@ -1,12 +1,13 @@
 'use client';
 
-import { Card } from '@/components';
+import { Button, Card } from '@/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signIn} from 'next-auth/react';
 import { FC, ReactNode, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import z from 'zod';
 import styles from './login-form.module.css';
+import { useRouter } from 'next/navigation';
 
 interface LoginFormProps {
   children?: ReactNode;
@@ -25,7 +26,9 @@ export const authSchema = z.object({
 });
 
 export const LoginForm: FC<LoginFormProps> = ({ children }) => {
+      // const { data: session } = useSession();
 
+  const router = useRouter();
   const {
     handleSubmit,
     register,
@@ -60,6 +63,7 @@ export const LoginForm: FC<LoginFormProps> = ({ children }) => {
       setLoginError('An unexpected error occurred. Please try again.');
     }
   };
+  const handleRegister = () => router.push('/register'); // Handle registration navigation
 
   return (
     <Card className={styles.card}>
@@ -77,10 +81,13 @@ export const LoginForm: FC<LoginFormProps> = ({ children }) => {
           {isLoading ? 'Logging in...' : 'Login'}
         </button>
         {loginError && <span className={styles.error}>{loginError}</span>}
-{/* <p>OR</p>
-        <button onClick={() => signIn('google')} className={styles.button}>
-           Continue withGoogle
-        </button> */}
+        <p>Do not have an account?</p>
+        {/* <Button size="sm" outline onClick={() => signIn('google')}>
+          Continue with Google
+        </Button> */}
+        <Button size="sm"  onClick={handleRegister}>
+          Register
+        </Button>
       </form>
     </Card>
   );
