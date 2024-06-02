@@ -58,4 +58,5 @@ describe('ConfirmModal', () => {
     const content = screen.getByText('Modal Content');
     expect(content).toBeInTheDocument();
   });
+
 });

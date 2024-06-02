@@ -8,4 +8,10 @@ describe('Card component', () => {
     const cardElement = screen.getByText('Test Content');
     expect(cardElement).toBeTruthy();
   });
+
+  it('applies additional className', () => {
+    render(<Card className="custom-class">Test Content</Card>);
+    const cardElement = screen.getByText('Test Content');
+    expect(cardElement.classList.contains('custom-class')).toBe(true);
+  });
 });

@@ -55,4 +55,16 @@ describe('Button', () => {
     screen.getByText('Clickable').click();
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  it('renders the button with custom className', () => {
+    render(<Button className="custom">Custom Button</Button>);
+    const button = screen.getByText('Custom Button');
+    expect(button.className).toContain('custom');
+  });
+
+  it('renders the button with additional props', () => {
+    render(<Button aria-label="Custom Label">Button</Button>);
+    const button = screen.getByText('Button');
+    expect(button).toHaveAttribute('aria-label', 'Custom Label');
+  });
 });
