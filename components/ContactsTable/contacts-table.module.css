@@ -1,0 +1,77 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.content {
+  overflow: auto;
+  padding: 1rem; /* Add padding to the content for better spacing */
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem; /* Add padding to the header for better spacing */
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensure the rounded corners are visible by clipping the content */
+
+  th {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: left;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  tbody {
+    tr {
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+      &:nth-child(2n) {
+        background-color: var(--foreground);
+      }
+
+      &:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+      &:hover {
+        background-color: #4a074b31; /* Light grey background on hover */
+      }
+    }
+  }
+}
+
+/* Media query for screens 768px and less */
+@media (max-width: 768px) {
+  .content {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .header {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .table {
+    display: block; /* Force the table to take full width and allow scrolling */
+    overflow-x: auto; /* Ensure the table can scroll horizontally */
+    white-space: nowrap; /* Prevent the table cells from wrapping */
+    display: block; /* Force the table to take full width and allow scrolling */
+  }
+}

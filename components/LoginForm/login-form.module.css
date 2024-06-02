@@ -1,0 +1,19 @@
+.card {
+  margin: auto;
+}
+
+.form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 20rem;
+  width: 100%;
+}
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

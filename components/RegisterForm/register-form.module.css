@@ -1,0 +1,47 @@
+.main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.intro {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+}
+
+.form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 20rem;
+  width: 100%;
+}
+
+/* input {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+span {
+  color: red;
+  font-size: 0.875rem;
+} */
