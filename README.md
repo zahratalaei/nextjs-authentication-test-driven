@@ -52,3 +52,21 @@ npm run dev
 ```bash
 npm test
 ```
+## Potential Future Improvements
+
+Given more time, the following enhancements could be implemented to extend the application:
+
+- **Selectable Contacts for Bulk Removal**  
+  Allow users to select multiple contacts and remove them in a single action to improve usability.
+
+- **Backend for Storing Registered Users**  
+  Introduce a backend service to securely store user registration data.
+
+- **Enhanced Contact Creation**  
+  Replace random contact generation with user-provided contact details, persisted via a backend API.
+
+- **Google Authentication**  
+  Add an option to sign in using Google for improved security and user convenience.
+
+- **Additional Enhancements**  
+  Further performance, UX, and feature improvements as the application evolves.
